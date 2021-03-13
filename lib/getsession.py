@@ -3,7 +3,7 @@ from cof.config import host_port, Account
 
 
 class GetSession():
-
+    # 获取各个账户登陆后的session
     def get_loginsession(self, flag):
         session = requests.Session()
         # session.get(host_port)
@@ -23,10 +23,10 @@ class GetSession():
         elif flag == 2:
             param = f'login?uname={Account.getlandlordname()}&upass={Account.getlandlordpwd()}&imgcode={Account.CODE}'
         elif flag == 3:
-            param = f'login?uname={Account.getpropertyname()}&upass={Account.getpropertypwd()}&imgcode={Account.CODE}'
+            param = f'login?uname={Account.getpropertyname()}&upass={Account.getpropertypwd()}&imgcode={Account.CODE}'git
         elif flag == 4:
             param = f'login?uname={Account.getplatformname()}&upass={Account.getplatformpwd()}&imgcode={Account.CODE}'
-        r = session.get(url=host_port+param,headers=headers)
+        r = session.get(url=host_port + param, headers=headers)
         print(r.json())
         return session
 

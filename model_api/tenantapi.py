@@ -7,7 +7,6 @@ class TenantApi():
     def __init__(self):
         self.session = GetSession().get_loginsession(1)
 
-
     def make_comment(self, content,parkingid):
 
         url = host_port+'admin/parkingremark/ParkingremarkController/'
