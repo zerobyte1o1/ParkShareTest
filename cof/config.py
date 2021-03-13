@@ -27,7 +27,7 @@ class Account:
 
     @classmethod
     def getlandlordname(cls):
-        return
+        return  cls.LANDLORD['name']
 
     @classmethod
     def getlandlordpwd(cls):
