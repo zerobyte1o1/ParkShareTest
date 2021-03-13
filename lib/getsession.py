@@ -23,7 +23,7 @@ class GetSession():
         elif flag == 2:
             param = f'login?uname={Account.getlandlordname()}&upass={Account.getlandlordpwd()}&imgcode={Account.CODE}'
         elif flag == 3:
-            param = f'login?uname={Account.getpropertyname()}&upass={Account.getpropertypwd()}&imgcode={Account.CODE}'git
+            param = f'login?uname={Account.getpropertyname()}&upass={Account.getpropertypwd()}&imgcode={Account.CODE}'
         elif flag == 4:
             param = f'login?uname={Account.getplatformname()}&upass={Account.getplatformpwd()}&imgcode={Account.CODE}'
         r = session.get(url=host_port + param, headers=headers)
