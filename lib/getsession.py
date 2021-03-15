@@ -1,10 +1,11 @@
 import requests
 from cof.config import host_port, Account
-
+import  warnings
 
 class GetSession():
     # 获取各个账户登陆后的session
     def get_loginsession(self, flag):
+        warnings.simplefilter('ignore', ResourceWarning)
         session = requests.Session()
         session.get(host_port+'image')
         url = host_port
@@ -27,7 +28,7 @@ class GetSession():
         elif flag == 4:
             param = f'login?uname={Account.getplatformname()}&upass={Account.getplatformpwd()}&imgcode={Account.CODE}'
         r = session.get(url=url + param, headers=headers)
-        print(r.json())
+        # print(r.json())
         return session
 
 
