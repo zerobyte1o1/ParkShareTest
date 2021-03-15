@@ -14,7 +14,9 @@ class LoginCase(unittest.TestCase):
 
     @ddt.data(*data)
     @ddt.unpack
-    def lo001_ui_login(self, username, pwd):
+    def test_lo001_ui_login(self, username, pwd):
         pur = LoginController()
         asserttext = pur.login(username, pwd)
         self.assertIsNot(asserttext, host_port)
+
+

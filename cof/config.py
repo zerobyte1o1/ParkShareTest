@@ -1,7 +1,9 @@
 # 云服务器地址
 host_port = "http://121.4.57.246:8080/SharedParkingPlace/"
 # 测试范围 ui api 空为全部
-scope = 'ui'
+scope = 'api'
+
+
 
 
 # 登陆数据

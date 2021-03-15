@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>test1</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-03-13 14:30:45</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:23.052047</p>
-<p class='attribute'><strong>Status:</strong> Pass 4</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-03-15 16:25:14</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.000996</p>
+<p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>this is my frist test program</p>
 </div>
@@ -221,41 +221,65 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
-    <td>test_ui_login.LoginCase</td>
-    <td>4</td>
-    <td>4</td>
+<tr class='errorClass'>
+    <td>unittest.loader._FailedTest</td>
+    <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',4)">Detail</a></td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_1___抢租客0___123_</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_login</div></td>
+    <td colspan='5' align='center'>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_2___出租方1___123_</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
 
-<tr id='pt1.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_3___物业0___123_</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: ImportError: Failed to import test module: test_api_login
+Traceback (most recent call last):
+  File "D:\python37\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\python37\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\byte\Desktop\ParkShareTest\test_case\test_api_login.py", line 33, in &lt;module&gt;
+    m
+NameError: name 'm' is not defined
 
-<tr id='pt1.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login_4___pt___123_</div></td>
-    <td colspan='5' align='center'>pass</td>
+ImportError: Failed to import test module: test_api_login
+Traceback (most recent call last):
+  File "D:\python37\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\python37\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\byte\Desktop\ParkShareTest\test_case\test_api_login.py", line 33, in &lt;module&gt;
+    m
+NameError: name 'm' is not defined
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>4</td>
-    <td>4</td>
+    <td>1</td>
     <td>0</td>
     <td>0</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>
